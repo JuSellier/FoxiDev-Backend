@@ -1,0 +1,14 @@
+## To check if api is up and running
+GET http://localhost:3002/
+content-type: application/json
+
+### POST A NEW USER TO DB
+POST http://localhost:3002/contact
+content-type: application/json
+
+{
+  "name": "Random guy",
+  "email": "juju.sel.mail@gmail.com",
+  "message": "Code my next website plz",
+  "phoneNumber": "666"
+}
