@@ -3,7 +3,7 @@ GET http://localhost:3002/
 content-type: application/json
 
 ### POST A NEW USER TO DB
-POST http://localhost:3002/contact
+POST https://foxidev.herokuapp.com/contact
 content-type: application/json
 
 {

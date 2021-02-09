@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/contact", contactRouter);
 
 app.get("/", (req, res) => {
-  res.status(200).send("Hi there!");
+  res.status(200).send("Hi there, submit your message at /contact");
 });
 
 app.listen(port, () => {
