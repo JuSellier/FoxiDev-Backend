@@ -7,7 +7,7 @@ POST https://foxidev.herokuapp.com/contact
 content-type: application/json
 
 {
-  "name": "Random guy",
+  "name": "Juju lbarge",
   "email": "juju.sel.mail@gmail.com",
   "message": "Code my next website plz",
   "phoneNumber": "666"

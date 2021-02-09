@@ -35,13 +35,13 @@ exports.newMessage = (req, res) => {
 
   // NOTIFY SITE MANAGER
   nodemailerSend(
-    process.env.CONTACT_EMAIL,
+    process.env.EMAIL_USERNAME,
     "New contact from Foxidev.io",
     `New message from Foxidev.io:
-Email: ${email}
-Name: ${name}
-Phone Number: ${phoneNumber}
-Message: ${message}`
+    Email: ${email}
+    Name: ${name}
+    Phone Number: ${phoneNumber}
+    Message: ${message}`
   ).catch(console.error);
 
   // NOTIFY USER
@@ -49,16 +49,16 @@ Message: ${message}`
     email,
     "Thanks for contacting us!",
     `Hi,
-
-I have received your message and will reply as early as possible.
-
-Here's the message I have received:
-Email: ${email}
-Name: ${name || "Not available"}
-Phone Number: ${phoneNumber || "Not available"}
-Message: ${message || "Not available"}
-
-I wish you a great day!`
+      
+      I have received your message and will reply as early as possible.
+      
+      Here's the message I have received:
+      Email: ${email}
+      Name: ${name || "Not available"}
+      Phone Number: ${phoneNumber || "Not available"}
+      Message: ${message || "Not available"}
+      
+      I wish you a great day!`
   ).catch(console.error);
 
   res.status(200).send("Got it!");
